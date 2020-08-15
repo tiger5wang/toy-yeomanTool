@@ -1,4 +1,4 @@
-import {enableGesture} from './week16/5_carouselWithLifecycle/gesture';
+import {enableGesture} from './gesture.js';
 
 
 export function createElement(comp, attributes, ...children) {

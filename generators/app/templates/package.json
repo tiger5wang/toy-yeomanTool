@@ -1,10 +1,10 @@
 {
-  "name": "temp-name",
+  "name": "<%= title %>",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha",
+    "test": "mocha --require @babel/register",
     "coverage": "nyc mocha",
     "start": "webpack-dev-server",
     "build": "webpack"

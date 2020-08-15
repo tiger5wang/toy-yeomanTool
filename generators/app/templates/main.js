@@ -1,4 +1,4 @@
-import {createElement, TextNode, Wrapper} from './createElement'
+import {createElement, TextNode, Wrapper} from '../lib/createElement'
 
 let component = <div>hello world!!!</div>;
 

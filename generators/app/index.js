@@ -12,31 +12,33 @@ module.exports = class extends Generator {
     }
 
     creating() {
-	    this.fs.copyTpl(
-	        this.templatePath('package.json'),
+        this.fs.copyTpl(
+            this.templatePath('package.json'),
             this.destinationPath('package.json'),
-            {title: 'Templating with yeoman'}
+            {title: 'Templating-with-yeoman'}
         );
         this.fs.copyTpl(
             this.templatePath('createElement.js'),
-            this.destinationPath('createElement.js')
-        );
-        this.fs.copyTpl(
-            this.templatePath('animation.js'),
-            this.destinationPath('animation.js')
+            this.destinationPath('lib/createElement.js')
         );
         this.fs.copyTpl(
             this.templatePath('gesture.js'),
-            this.destinationPath('gesture.js')
+            this.destinationPath('lib/gesture.js')
         );
-	    this.fs.copyTpl(
+        this.fs.copyTpl(
+            this.templatePath('main.js'),
+            this.destinationPath('src/main.js')
+        );
+        this.fs.copyTpl(
             this.templatePath('index.html'),
-            this.destinationPath('src/index.html'),
+            this.destinationPath('public/index.html'),
+            {title: 'template-with-yeoman'}
         );
         this.fs.copyTpl(
             this.templatePath('main.test.js'),
             this.destinationPath('test/main.test.js'),
         );
+
         this.fs.copyTpl(
             this.templatePath('webpack.config.js'),
             this.destinationPath('webpack.config.js'),
@@ -49,6 +51,14 @@ module.exports = class extends Generator {
             this.templatePath('.babelrc'),
             this.destinationPath('.babelrc'),
         );
+
+        // this.fs.copyTpl(
+        //     this.templatePath('animation.js'),
+        //     this.destinationPath('animation.js')
+        // );
+
+
+
         this.npmInstall([
             'webpack',
             'webpack-cli',
